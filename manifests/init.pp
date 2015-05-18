@@ -20,7 +20,7 @@ class limits(
     #purge   => true,
     owner   => 'puppet',
     group   => 'puppet',
-    mode    =>  '600';
+    mode    =>  0600,
   }
 
   exec { 'cp_limits':

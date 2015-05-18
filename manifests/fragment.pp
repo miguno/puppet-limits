@@ -20,6 +20,6 @@ define limits::fragment (
 
   file { "${limits::fragments_dir}/${file_name}.txt":
     content => inline_template("<%= @title.gsub('/', ' ') %> <%= @value %>\n"),
-    before => Exec['cp_limits']
+    before  => Exec['cp_limits']
   }
 }
